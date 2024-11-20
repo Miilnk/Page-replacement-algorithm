@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面置换算法</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>页面置换算法</h1>
+
+        <!-- 输入部分 -->
+        <div class="input-section">
+            <!-- 页框大小 -->
+            <div class="input-group">
+                <label for="frameSize">页框大小：</label>
+                <input type="number" id="frameSize" min="1" value="3">
+            </div>
+
+            <!-- 页面引用序列 -->
+            <div class="input-group">
+                <label for="pageSequence">页面引用序列：</label>
+                <input type="text" id="pageSequence" placeholder="例如：1 2 3 4 1 2 5">
+            </div>
+
+            <!-- 随机生成序列 -->
+            <div class="random-generator">
+                <h3>随机生成序列</h3>
+                <div class="input-group">
+                    <label for="seqLength">序列长度：</label>
+                    <input type="number" id="seqLength" min="1" value="10">
+                </div>
+                <div class="input-group">
+                    <label for="pageRange">页面范围：</label>
+                    <input type="number" id="pageRange" min="1" value="7">
+                </div>
+                <button id="generateBtn">生成随机序列</button>
+            </div>
+        </div>
+
+        <!-- 算法选择 -->
+        <div class="algorithm-section">
+            <h3>选择算法</h3>
+            <!-- 选择算法 -->
+            <select id="algorithm">
+                <option value="OPT">最佳置换算法 (OPT)</option>
+                <option value="FIFO">先进先出算法 (FIFO)</option>
+                <option value="LRU">最近最久未使用算法 (LRU)</option>
+            </select>
+            <button id="startBtn">开始模拟</button>
+            <button id="resetBtn">重置</button>
+        </div>
+
+        <!-- 结果展示 -->
+        <div class="result-section">
+            <!-- 当前页框状态 -->
+            <div class="frames-display">
+                <h3>当前页框状态</h3>
+                <div id="framesContainer"></div>
+            </div>
+
+            <!-- 统计信息 -->
+            <div class="statistics">
+                <h3>统计信息</h3>
+                <p>页错误次数：<span id="pageFaults">0</span></p>
+                <p>页命中次数：<span id="pageHits">0</span></p>
+                <p>页错误率：<span id="faultRate">0%</span></p>
+            </div>
+
+            <!-- 置换过程 -->
+            <div class="process-table">
+                <h3>置换过程</h3>
+                <table id="processTable">
+                    <thead>
+                        <tr>
+                            <th>访问页面</th>
+                            <th>页框状态</th>
+                            <th>是否缺页</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

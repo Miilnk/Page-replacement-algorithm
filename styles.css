@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.input-section, .algorithm-section, .result-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* .random-generator h3 {
+    margin-bottom: 1rem;
+} */
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: inline-block;
+    width: 120px;
+    margin-right: 1rem;
+}
+
+input, select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#algorithm {
+    margin-right: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#resetBtn {
+    background-color: #e74c3c;
+}
+
+#resetBtn:hover {
+    background-color: #c0392b;
+}
+
+.frames-display {
+    margin-bottom: 2rem;
+}
+
+#framesContainer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.frame {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background-color: #fff;
+}
+
+.statistics {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.statistics p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.statistics span {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#pageFaults {
+    color: #e74c3c;
+}
+
+#pageHits {
+    color: #27ae60;
+}
+
+#faultRate {
+    color: #2980b9;
+}
+
+.process-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+}
+
+.page-fault {
+    color: #e74c3c;
+}
+
+.page-hit {
+    color: #27ae60;
+}
